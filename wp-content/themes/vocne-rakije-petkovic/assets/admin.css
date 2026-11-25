@@ -1,0 +1,61 @@
+.vrp-product-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+  padding: 12px 0;
+}
+
+.vrp-form-field {
+  min-width: 0;
+}
+
+.vrp-form-field-wide {
+  grid-column: 1 / -1;
+}
+
+.vrp-form-field label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.vrp-form-field input,
+.vrp-form-field textarea,
+.vrp-form-field select {
+  max-width: 100%;
+}
+
+.vrp-form-field textarea {
+  resize: vertical;
+}
+
+.vrp-product-image-preview {
+  width: 220px;
+  margin-bottom: 12px;
+  border: 1px solid #dcdcde;
+  background: #f6f7f7;
+}
+
+.vrp-product-image-preview:empty {
+  display: none;
+}
+
+.vrp-product-image-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.vrp-remove-product-image[hidden] {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .vrp-product-form {
+    grid-template-columns: 1fr;
+  }
+
+  .vrp-form-field-wide {
+    grid-column: auto;
+  }
+}
